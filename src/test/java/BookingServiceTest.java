@@ -39,6 +39,12 @@ public class BookingServiceTest {
 
     @InjectMocks
     BookingService bookingService;
+    
+    @Before
+    public void init_mocks(){
+        //If we want to define the attribute values from JUnit Test
+        ReflectionTestUtils.setField(bookingService, "varName", "value");
+    }
 
 
     @Test
